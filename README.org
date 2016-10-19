@@ -2,7 +2,7 @@
 ** Migrant Deaths by month for 2015 from Missing migrants projects
 ** Link to the resulting Google spreadsheet
 
-[[https://docs.google.com/spreadsheets/d/1lJ-HserVAgJNrBFa1tSReKYniSPp1yxZmwXXUKEUI6o/edit?usp=sharing][Google spreadsheet]]
+[[https://docs.google.com/spreadsheets/d/1pqXiZzBt1ZqYxSvFU5BBk3njNuU0LV9UgFk-ctqNtzE/pubhtml][Google spreadsheet]]
 
 ** A simple visualization of the raw data
 
