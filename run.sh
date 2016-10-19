@@ -2,5 +2,5 @@
 
 
 # Python run.
-python src/ebola-dataset-list.py
+python src/get_oim_data.py
 Rscript src/graph.R

@@ -5,7 +5,7 @@ library(dplyr)
 library(ggthemr)
 library(tidyr)
 
-tab <- read_csv("../data/oim_data_latest.csv")
+tab <- read_csv("data/oim_data_latest.csv")
 names(tab)[1] <- "Area"
 glimpse(tab)
 

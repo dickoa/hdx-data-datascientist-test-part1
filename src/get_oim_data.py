@@ -34,6 +34,6 @@ oim_data.to_csv("data/oim_data_latest.csv")
 ### http://docs.hdx.rwlabs.org/providing-metadata-for-your-datasets-on-hdx/
 metadata = {'location' : 'World',
             'source'   : 'International Organization for Migration',
-            'date of dataset': etree.tostring(meta2, method = 'html'),
-            'comment' : etree.tostring(meta1, method = 'html')}
+            'date of dataset': "2016",
+            'comment' : "Scraped from OIM website"}
             
