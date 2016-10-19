@@ -1,0 +1,38 @@
+### Bonus
+library(ggplot2)
+library(readr)
+library(ggthemr)
+ggthemr(palette = "dust")
+
+tab <- read_csv("data/oim_data_latest.csv")
+tab
+
+
+ <- tab %>%
+  gather(key = month, value = deaths, -Area)
+
+### Non breaking space
+pattern <- paste0("\\,|\\*|", intToUtf8(160))
+
+###
+tab <- tab %>%
+  gather(key = month, value = deaths, -Area) %>%
+  mutate(deaths = as.integer(gsub(pattern, "", deaths))) %>%
+  spread(key = month, value = deaths)
+
+### Final check
+str(tab)
+glimpse(tab)
+summary(tab)
+
+### Some ploting for fun
+tab %>%
+  filter(Area != "Total") %>%
+  rename(total = `Total to date`) %>%
+  ggplot(aes(reorder(Area, total), total, fill = Area)) +
+  geom_bar(stat = "identity") +
+  labs(x = "", y = "Total deaths") +
+  coord_flip() +
+  theme(legend.position = "none")
+
+ggsave("deaths.png", last_plot())
